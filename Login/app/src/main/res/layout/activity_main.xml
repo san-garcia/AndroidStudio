@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <!--Logo de la app-->
+    <ImageView
+        android:id="@+id/logoImagen"
+        android:layout_width="478dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="Logo de la aplicación"
+        android:src="@drawable/logotitulo" />
+
+    <!--Texto del usuario-->
+    <TextView
+        android:id="@+id/textViewUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="280dp"
+        />
+
+    <!--Caja del usuario-->
+    <EditText
+        android:id="@+id/cajaUsuario"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Usuario"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Texto de la contraseña-->
+    <TextView
+        android:id="@+id/textViewContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="390dp" />
+
+    <!--Caja de texto de la contraseña-->
+    <EditText
+        android:id="@+id/cajaContraseña"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="420dp"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Botón para iniciar sesion-->
+    <Button
+        android:id="@+id/botonLogin"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="490dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Iniciar Sesión"
+        android:textColor="#FFFFFF" />
+
+    <!--Botón para registrarse-->
+    <Button
+        android:id="@+id/botonRegistrar"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Registrarse"
+        android:textColor="#FFFFFF" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

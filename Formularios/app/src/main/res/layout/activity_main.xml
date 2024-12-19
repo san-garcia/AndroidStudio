@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#32396f"
+    tools:context=".MainActivity">
+
+    <!--Logo del formulario-->
+    <ImageView
+        android:id="@+id/logoformulario"
+        android:layout_width="500dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:contentDescription="Logo del formulario"
+        android:src="@drawable/logoformulario" />
+
+    <!--Texto formulario-->
+    <TextView
+        android:id="@+id/textViewFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="330dp"
+        android:text="¿Qué es lo que busca?"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!--Botón para buscar empleo-->
+    <Button
+        android:id="@+id/botonBusco"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="370dp"
+        android:backgroundTint="#f26261"
+        android:padding="12dp"
+        android:text="Busco empleo"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+
+    <!--Botón para ofrecer empleo-->
+    <Button
+        android:id="@+id/botonOfrezco"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="430dp"
+        android:backgroundTint="#f26261"
+        android:padding="12dp"
+        android:text="Ofrezco empleo"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

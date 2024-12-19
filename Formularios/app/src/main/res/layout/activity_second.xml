@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#32396f"
+    tools:context=".MainActivity">
+
+    <!--Texto Busqueda de Trabajo-->
+    <TextView
+        android:id="@+id/textViewFormulario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="100dp"
+        android:text="Ofrecer Empleo"
+        android:textStyle="bold"
+        android:textColor="#d25d6a"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textViewPuesto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:text="Título del Puesto:"
+        android:textStyle="bold"
+        android:textColor="#f3f3f3"
+        android:textSize="16sp" />
+
+    <!--Caja titulo del puesto-->
+    <EditText
+        android:id="@+id/cajaTipo"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Ejemplo: Programador Backend"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="180dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Texto Ubicacion-->
+    <TextView
+        android:id="@+id/textViewUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="230dp"
+        android:text="Ubicación:"
+        android:textStyle="bold"
+        android:textColor="#f3f3f3"
+        android:textSize="16sp"/>
+
+    <!--Caja de Ubicacion-->
+    <EditText
+        android:id="@+id/cajaLugar"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Valencia, Alicante"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="260dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Texto Rango Salarial-->
+    <TextView
+        android:id="@+id/textViewSalario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="310dp"
+        android:text="Salario:"
+        android:textStyle="bold"
+        android:textColor="#f3f3f3"
+        android:textSize="16sp"/>
+
+    <!--Caja de Salario-->
+    <EditText
+        android:id="@+id/cajaSalario"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Ejemplo: 1800-2500"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="330dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Texto Descripcion-->
+    <TextView
+        android:id="@+id/textViewDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="380dp"
+        android:text="Descripcion del Puesto:"
+        android:textStyle="bold"
+        android:textColor="#f3f3f3"
+        android:textSize="16sp"/>
+
+    <!--Caja de Descripcion-->
+    <EditText
+        android:id="@+id/cajaDescripcion"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:hint="Detalles sobre el puesto y requisitos"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--Botón para Publicar empleo-->
+    <Button
+        android:id="@+id/botonPublicar"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="460dp"
+        android:backgroundTint="#f26261"
+        android:padding="12dp"
+        android:text="Publicar Empleo"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <!--Botón para volver al inicio-->
+    <Button
+        android:id="@+id/botonInicio"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="520dp"
+        android:backgroundTint="#f26261"
+        android:padding="12dp"
+        android:text="Volver al inicio"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <!--Logo chica laptop-->
+    <ImageView
+        android:id="@+id/logolaptop"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="680dp"
+        android:contentDescription="Logo chico laptop"
+        android:src="@drawable/chica_laptop" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

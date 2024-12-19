@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Logo pequeño de la app-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!--Titulo de Bienvenida-->
+    <TextView
+        android:id="@+id/textBienvenida"
+        android:layout_width="333dp"
+        android:layout_height="76dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:text="¡Bienvenid@ a Corazones Callejeros Valencia!"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="72dp" />
+
+    <!--Subtitulo-->
+    <TextView
+        android:layout_width="333dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Aquí podrás encontrar tu peludito ideal"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textBienvenida" />
+
+    <!-- Perro Mango -->
+    <ImageView
+        android:id="@+id/mango"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/mango"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textBienvenida" />
+
+    <!--Descripcion de Mango-->
+    <TextView
+        android:id="@+id/descripcionMango"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Mango🥭"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/mango"
+        app:layout_constraintStart_toStartOf="@id/mango"
+        app:layout_constraintEnd_toEndOf="@id/mango" />
+
+    <!--Boton conocer Mango-->
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Conóceme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/descripcionMango"
+        app:layout_constraintStart_toStartOf="@id/descripcionMango"
+        app:layout_constraintEnd_toEndOf="@id/descripcionMango" />
+
+    <!-- Perro Tote -->
+    <ImageView
+        android:id="@+id/tote"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/tote"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textBienvenida" />
+
+    <!--Descripcion de Tote-->
+    <TextView
+        android:id="@+id/descripcionTote"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Tote❄️"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tote"
+        app:layout_constraintStart_toStartOf="@id/tote"
+        app:layout_constraintEnd_toEndOf="@id/tote" />
+
+    <!--Boton conocer Tote-->
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Conóceme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/descripcionTote"
+        app:layout_constraintStart_toStartOf="@id/descripcionTote"
+        app:layout_constraintEnd_toEndOf="@id/descripcionTote" />
+
+    <!-- Perro Kenzo -->
+    <ImageView
+        android:id="@+id/kenzo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="164dp"
+        android:src="@drawable/kenzo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mango" />
+
+    <!--Descripcion de Kenzo-->
+    <TextView
+        android:id="@+id/descripcionKenzo"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Kenzo⭐"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/kenzo"
+        app:layout_constraintStart_toStartOf="@id/kenzo"
+        app:layout_constraintEnd_toEndOf="@id/kenzo" />
+
+    <!--Boton conocer Kenzo-->
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Conóceme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/descripcionKenzo"
+        app:layout_constraintStart_toStartOf="@id/descripcionKenzo"
+        app:layout_constraintEnd_toEndOf="@id/descripcionKenzo" />
+
+    <!-- Perro Momo -->
+    <ImageView
+        android:id="@+id/momo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="164dp"
+        android:src="@drawable/momo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tote" />
+
+    <!--Descripcion de Momo-->
+    <TextView
+        android:id="@+id/descripcionMomo"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Momo🍂"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/momo"
+        app:layout_constraintStart_toStartOf="@id/momo"
+        app:layout_constraintEnd_toEndOf="@id/momo" />
+
+    <!--Boton conocer Momo-->
+    <Button
+        android:layout_width="172dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#F28C8C"
+        android:padding="12dp"
+        android:text="Conóceme"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/descripcionMomo"
+        app:layout_constraintStart_toStartOf="@id/descripcionMomo"
+        app:layout_constraintEnd_toEndOf="@id/descripcionMomo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

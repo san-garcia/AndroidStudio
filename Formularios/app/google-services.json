@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "228818182607",
+    "firebase_url": "https://proyectosandra-b2ec3-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "proyectosandra-b2ec3",
+    "storage_bucket": "proyectosandra-b2ec3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228818182607:android:bfb4b052f26283e03fb2ba",
+        "android_client_info": {
+          "package_name": "com.example.formularios"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmnRtB21b7WodWMCgUXxz88C2TVUFgO7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
