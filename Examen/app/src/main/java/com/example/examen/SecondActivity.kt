@@ -4,17 +4,23 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.*
 
+
 class SecondActivity : AppCompatActivity() {
-    private val questions = listOf(
+    // Declaro una variable de listas privadas para las preguntas del test
+    private val preguntas = listOf(
         Question(
+            // Escribo el texto
             text = "¿En qué año se construyó Aula Campus?",
+            // Escribo las diferentes respuestas
             answers = listOf("2006", "2020", "1999", "2002"),
+            // Selecciono cual es la respuesta correcta
             correctAnswerIndex = 2,
+            // Añado una imagen
             imageResId = R.drawable.construccion
         ),
         Question(
             text = "¿Cuál es el color de Aula Campus?",
-            answers = listOf("Azul", "Rojo", "Verde", "Amarillo"),
+            answers = listOf("Azul","Rojo","Verde","Amarillo"),
             correctAnswerIndex = 0,
             imageResId = R.drawable.color
         ),
@@ -47,19 +53,13 @@ class SecondActivity : AppCompatActivity() {
         ),
         Question(
             text = "¿Qué idiomas están disponibles para los cursos en AulaCampus?",
-            answers = listOf("Solo español",
-                "Español e inglés",
-                "Más de 10 idiomas",
-                "Solo inglés"),
+            answers = listOf("Solo español","Español e inglés","Más de 10 idiomas","Solo inglés"),
             correctAnswerIndex = 1,
             imageResId = R.drawable.idiomas
         ),
         Question(
             text = "¿Dónde se encuentra el centro de Aula Campus?",
-            answers = listOf("Barcelona",
-                "Francia",
-                "Burjassot",
-                "Argentina"),
+            answers = listOf("Barcelona","Francia","Burjassot","Argentina"),
             correctAnswerIndex = 2,
             imageResId = R.drawable.barcelona
         ),
@@ -77,42 +77,41 @@ class SecondActivity : AppCompatActivity() {
             answers = listOf("Solo con tarjeta de crédito",
                 "Diversos métodos de pago, como tarjeta, PayPal y transferencia bancaria ",
                 "Únicamente con criptomonedas",
-                "Los cursos son gratuitos"),
+                "Los cursos son totalmente gratuitos"),
             correctAnswerIndex = 1,
             imageResId = R.drawable.pago
         ),
         Question(
             text = "¿Quién es el mejor docente de Aula Campus?",
-            answers = listOf("Jose Manuel",
-                "Alejandro Palacios",
-                "Mario Garcia",
-                "Todas las respuestas son correctas"),
+            answers = listOf("Jose Manuel","Alejandro Palacios","Mario Garcia","Todas las respuestas son correctas"),
             correctAnswerIndex = 3,
             imageResId = R.drawable.profes
         )
     )
 
-    private var currentQuestionIndex = 0
-    private var score = 0
-    private val selectedAnswers = mutableMapOf<Int, Int>() // Mapa para guardar respuestas seleccionadas
+    // Creo variables privadas para las preguntas, contador de respuestas correctas
+    private var pregunta = 0
+    private var puntuacion = 0
+    private val respuestas = mutableMapOf<Int, Int>() // Mapa para guardar respuestas seleccionadas
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val questionTextView: TextView = findViewById(R.id.textView)
-        val radioGroup: RadioGroup = findViewById(R.id.radioGroup)
-        val radioButton1: RadioButton = findViewById(R.id.radioButton)
-        val radioButton2: RadioButton = findViewById(R.id.radioButton2)
-        val radioButton3: RadioButton = findViewById(R.id.radioButton3)
-        val radioButton4: RadioButton = findViewById(R.id.radioButton4)
-        val nextButton: Button = findViewById(R.id.buttonNext)
-        val backButton: Button = findViewById(R.id.buttonBack)
+        // Llamo a las variables del XML
+        val questionTextView: TextView = findViewById(R.id.textViewUsuario)
+        val radioGroup: RadioGroup = findViewById(R.id.grupoRespuestas)
+        val radioButton1: RadioButton = findViewById(R.id.respuesta1)
+        val radioButton2: RadioButton = findViewById(R.id.respuesta2)
+        val radioButton3: RadioButton = findViewById(R.id.respuesta3)
+        val radioButton4: RadioButton = findViewById(R.id.respuesta4)
+        val nextButton: Button = findViewById(R.id.botonSiguiente)
+        val backButton: Button = findViewById(R.id.botonAnterior)
         val questionImageView: ImageView = findViewById(R.id.questionImageView)
 
         // Función para cargar una pregunta
         fun loadQuestion(index: Int) {
-            val question = questions[index]
+            val question = preguntas[index]
             questionTextView.text = question.text
             radioButton1.text = question.answers[0]
             radioButton2.text = question.answers[1]
@@ -120,8 +119,8 @@ class SecondActivity : AppCompatActivity() {
             radioButton4.text = question.answers[3]
             radioGroup.clearCheck()
 
-            // Restaurar la selección guardada (si existe)
-            val savedAnswer = selectedAnswers[index]
+            // Restaurar la selección guardada
+            val savedAnswer = respuestas[index]
             if (savedAnswer != null) {
                 when (savedAnswer) {
                     0 -> radioButton1.isChecked = true
@@ -141,15 +140,15 @@ class SecondActivity : AppCompatActivity() {
         }
 
         // Cargar la primera pregunta
-        loadQuestion(currentQuestionIndex)
+        loadQuestion(pregunta)
 
-        // Configurar botón "Siguiente"
+        // Configurar botón Siguiente
         nextButton.setOnClickListener {
             val selectedOptionIndex = when (radioGroup.checkedRadioButtonId) {
-                R.id.radioButton -> 0
-                R.id.radioButton2 -> 1
-                R.id.radioButton3 -> 2
-                R.id.radioButton4 -> 3
+                R.id.respuesta1 -> 0
+                R.id.respuesta2 -> 1
+                R.id.respuesta3 -> 2
+                R.id.respuesta4 -> 3
                 else -> -1
             }
 
@@ -157,19 +156,19 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, selecciona una opción.", Toast.LENGTH_SHORT).show()
             } else {
                 // Guardar la respuesta seleccionada
-                selectedAnswers[currentQuestionIndex] = selectedOptionIndex
+                respuestas[pregunta] = selectedOptionIndex
 
                 // Verificar respuesta si es necesario
-                if (selectedOptionIndex == questions[currentQuestionIndex].correctAnswerIndex) {
-                    score++
+                if (selectedOptionIndex == preguntas[pregunta].correctAnswerIndex) {
+                    puntuacion++
                 }
 
                 // Ir a la siguiente pregunta si es posible
-                if (currentQuestionIndex < questions.size - 1) {
-                    currentQuestionIndex++
-                    loadQuestion(currentQuestionIndex)
+                if (pregunta < preguntas.size - 1) {
+                    pregunta++
+                    loadQuestion(pregunta)
                 } else {
-                    questionTextView.text = "¡Cuestionario terminado! Puntuación: $score/${questions.size}"
+                    questionTextView.text = "¡Cuestionario terminado! Puntuación: $puntuacion/${preguntas.size}"
                     radioGroup.clearCheck()
                     radioButton1.isEnabled = false
                     radioButton2.isEnabled = false
@@ -183,9 +182,9 @@ class SecondActivity : AppCompatActivity() {
 
         // Configurar botón "Atrás"
         backButton.setOnClickListener {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--
-                loadQuestion(currentQuestionIndex)
+            if (pregunta > 0) {
+                pregunta--
+                loadQuestion(pregunta)
             } else {
                 Toast.makeText(this, "No puedes ir más atrás.", Toast.LENGTH_SHORT).show()
             }

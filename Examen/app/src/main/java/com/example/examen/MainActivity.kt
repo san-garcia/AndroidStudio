@@ -9,8 +9,8 @@ import androidx.core.view.*
 
 class MainActivity : AppCompatActivity() {
     /*Declaro el nombre del usuario y su contraseña*/
-    private val user = "a"
-    private val pswd = "a"
+    private val user = "sangarfa@campusaula.com"
+    private val pswd = "1111"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /*Alertas al realizar dicha acción*/
     private fun showAlert() {
         val alerta = AlertDialog.Builder(this)
         alerta.setTitle("ERROR AL INICIAR SESIÓN")
