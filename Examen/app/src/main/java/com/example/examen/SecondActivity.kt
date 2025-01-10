@@ -1,6 +1,8 @@
 package com.example.examen
 
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.*
 
@@ -158,12 +160,12 @@ class SecondActivity : AppCompatActivity() {
                 // Guardar la respuesta seleccionada
                 respuestas[pregunta] = selectedOptionIndex
 
-                // Verificar respuesta si es necesario
+                // Verificar respuesta si es correcto
                 if (selectedOptionIndex == preguntas[pregunta].correctAnswerIndex) {
                     puntuacion++
                 }
 
-                // Ir a la siguiente pregunta si es posible
+                // Ir a la siguiente pregunta
                 if (pregunta < preguntas.size - 1) {
                     pregunta++
                     loadQuestion(pregunta)
@@ -176,6 +178,15 @@ class SecondActivity : AppCompatActivity() {
                     radioButton4.isEnabled = false
                     nextButton.isEnabled = false
                     backButton.isEnabled = false
+
+
+                    // Mostrar confeti si el usuario aprueba con 7 o más respuestas correctas
+                    if (puntuacion >= 7) {
+                        lanzarConfeti()
+                        Toast.makeText(this, "¡Felicidades, aprobaste!", Toast.LENGTH_LONG).show()
+                    } else {
+                        Toast.makeText(this, "No aprobaste, intenta de nuevo.", Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }
@@ -189,6 +200,40 @@ class SecondActivity : AppCompatActivity() {
                 Toast.makeText(this, "No puedes ir más atrás.", Toast.LENGTH_SHORT).show()
             }
         }
+
+
+
+
+    }
+    // Lanzamiento de confeti
+    private fun lanzarConfeti() {
+        val confettiContainer: FrameLayout = findViewById(R.id.confettiContainer)
+        val colores = listOf(Color.parseColor("#f63470"), Color.parseColor("#da92d1"), Color.parseColor("#fbe08a"), Color.parseColor("#f9f2f2"), Color.parseColor("#f2d1e4"))
+
+        for (i in 0..100) {
+            val confettiView = View(this)
+            confettiView.setBackgroundColor(colores.random())
+
+            // Tamaño aleatorio para el confeti
+            val size = (10..30).random()
+            confettiView.layoutParams = FrameLayout.LayoutParams(size, size)
+
+            // Posición inicial aleatoria desde arriba
+            confettiView.x = (0..confettiContainer.width).random().toFloat()
+            confettiView.y = -size.toFloat()
+
+            confettiContainer.addView(confettiView)
+
+            // Animación de caída
+            confettiView.animate()
+                .translationY(confettiContainer.height.toFloat() + size)
+                .rotation((0..360).random().toFloat())
+                .setDuration((2000..4000).random().toLong())
+                .withEndAction {
+                    confettiContainer.removeView(confettiView) // Eliminar el confeti al terminar
+                }
+                .start()
+        }
     }
 
     // Clase de datos para representar una pregunta
@@ -198,4 +243,6 @@ class SecondActivity : AppCompatActivity() {
         val correctAnswerIndex: Int,
         val imageResId: Int
     )
+
+
 }
