@@ -13,11 +13,30 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         /*Botón para entrar en la aplicación del restaurante*/
-        val botonEntrar : Button = findViewById(R.id.botonEntrar)
+        val botonMesas : Button = findViewById(R.id.botonDistribucion)
 
-        /*Accion que se hace cuando el usuario clica al botón*/
-        botonEntrar.setOnClickListener {
+        /*Botón para entrar a la carta*/
+        val botonCarta : Button = findViewById(R.id.botonAlimentos)
+
+        /*Botón para entrar a las bebidas*/
+        val botonBebidas : Button = findViewById(R.id.botonBebidas)
+
+
+        /*Accion que se hace cuando el usuario clica al botón para pedir reserva en las mesas*/
+        botonMesas.setOnClickListener {
+            val intent = Intent(this, MesaActivity::class.java)
+            startActivity(intent)
+        }
+
+        /*Accion que hace el usuario para pedir en la carta*/
+        botonCarta.setOnClickListener {
             val intent = Intent(this, CartaActivity::class.java)
+            startActivity(intent)
+        }
+
+        /*Accion que realiza el usuario para pedir las bebidas*/
+        botonBebidas.setOnClickListener {
+            val intent = Intent(this, BebidasActivity::class.java)
             startActivity(intent)
         }
     }

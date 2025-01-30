@@ -22,7 +22,12 @@
             </intent-filter>
         </activity>
 
+        <!--Llamada la página de carta-->
         <activity android:name=".CartaActivity"/>
+        <!--Llamada la página de distribución de mesas-->
+        <activity android:name=".MesaActivity"/>
+        <!--Llamada la página de bebidas-->
+        <activity android:name=".BebidasActivity"/>
     </application>
 
 </manifest>

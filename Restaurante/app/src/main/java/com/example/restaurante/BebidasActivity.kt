@@ -6,11 +6,11 @@ import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class CartaActivity : AppCompatActivity() {
+class BebidasActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_carta)
+        setContentView(R.layout.activity_bebidas)
 
         /*Botón para entrar en la aplicación del restaurante*/
         val botonAtras : ImageButton = findViewById(R.id.flecha)
@@ -20,6 +20,5 @@ class CartaActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
     }
 }

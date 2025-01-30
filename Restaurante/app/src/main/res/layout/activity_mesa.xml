@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/flecha"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/distribucion"
+        app:layout_constraintBottom_toBottomOf="@+id/distribucion"
+        app:layout_constraintEnd_toStartOf="@+id/distribucion"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/distribucion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distribución mesas"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/flecha"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.083"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

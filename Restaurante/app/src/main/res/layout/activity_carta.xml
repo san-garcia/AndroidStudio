@@ -8,27 +8,30 @@
     android:background="#ffffff"
     tools:context=".CartaActivity">
 
-    <Button
-        android:layout_width="88dp"
-        android:layout_height="90dp"
-        android:backgroundTint="#FF5733"
-        android:drawableLeft="@drawable/flecha"
-        android:padding="10dp"
-        android:textColor="#fffff"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <ImageButton
+        android:id="@+id/flecha"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_carta"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_carta"
+        app:layout_constraintEnd_toStartOf="@+id/tv_carta"
+        android:layout_marginEnd="8dp"/>
 
     <TextView
+        android:id="@+id/tv_carta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hecha un vistazo a nuestra carta"
+        android:text="Carta de alimentos"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flecha"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.083"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,18 +40,169 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.123" />
 
-    <!--Contenido donde estarás las imagenes del sushi-->
     <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:id="@+id/grid_poke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="352dp"
+        android:columnCount="4"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carta">>
 
+        <ImageView
+            android:layout_width="82dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke1" />
+
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke2" />
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke4" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="92dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke3" />
+
+        <ImageView
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke6" />
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke5" />
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="93dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke8" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="92dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_margin="5dp"
+            android:src="@drawable/poke7" />
 
     </GridLayout>
+
+    <GridLayout
+        android:id="@+id/grid_sushi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:columnCount="4"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carta">
+
+        <ImageView
+            android:layout_width="82dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi1" />
+
+        <ImageView
+            android:layout_width="86dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi2" />
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="90dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi4" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="92dp"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi3" />
+
+        <ImageView
+            android:layout_width="87dp"
+            android:layout_height="87dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi6" />
+
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi5" />
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="93dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi8" />
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="92dp"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_margin="5dp"
+            android:src="@drawable/sushi7" />
+
+    </GridLayout>
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,37 +211,9 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
-
-    <!--Contenido donde estarás las imagenes del poke-->
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-    </GridLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ramen Category"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.7" />
-
-    <!--Contenido donde estarás las imagenes del ramen-->
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-
-    </GridLayout>
+        app:layout_constraintVertical_bias="0.339" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
