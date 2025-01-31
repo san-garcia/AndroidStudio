@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f2f6ff">
 
     <ImageButton
         android:id="@+id/flecha"
@@ -29,4 +30,277 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.083"/>
+
+    <GridLayout
+        android:id="@+id/grid_mesas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:columnCount="3"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distribucion">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <ImageButton
+                android:id="@+id/mesa100"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mesa 100"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <!-- Mesa 101 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <ImageButton
+                android:id="@+id/mesa101"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mesa 101"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+        <!-- Mesa 200 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="5dp">
+
+            <ImageButton
+                android:id="@+id/mesa102"
+                android:layout_width="137dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa6" />
+
+            <TextView
+                android:id="@+id/nombre102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mesa 102"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"/>
+        </LinearLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/grid_mesas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:columnCount="3"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distribucion">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa200"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre200"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 200"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa201"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre201"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 201"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa202"
+                android:layout_width="137dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa6" />
+
+            <TextView
+                android:id="@+id/nombre202"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 202"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/grid_mesas3"
+        android:layout_width="426dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="532dp"
+        android:columnCount="4"
+        android:padding="10dp"
+        android:rowCount="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/distribucion">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa300"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre300"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 300"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa301"
+                android:layout_width="115dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa4" />
+
+            <TextView
+                android:id="@+id/nombre301"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 301"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/mesa302"
+                android:layout_width="137dp"
+                android:layout_height="119dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mesa6" />
+
+            <TextView
+                android:id="@+id/nombre302"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mesa 302"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </GridLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

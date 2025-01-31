@@ -1,30 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <ImageButton
-        android:id="@+id/flecha"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/flecha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/bebidas"
-        app:layout_constraintBottom_toBottomOf="@+id/bebidas"
-        app:layout_constraintEnd_toStartOf="@+id/bebidas"
-        android:layout_marginEnd="8dp"/>
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#f2f6ff">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/flecha"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/flecha" />
+
+        <TextView
+            android:id="@+id/tv_carta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Carta de bebidas"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!-- Contenedor de imágenes de bebidas -->
     <TextView
-        android:id="@+id/bebidas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Carta bebidas"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/flecha"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.083"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_marginTop="16dp"
+        android:text="Drinks Category"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/agua"
+                android:layout_width="133dp"
+                android:layout_height="165dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/agua" />
+
+            <ImageButton
+                android:id="@+id/cocacola"
+                android:layout_width="wrap_content"
+                android:layout_height="149dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cocacola" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/estrelladam"
+                android:layout_width="133dp"
+                android:layout_height="165dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/estrelladam" />
+
+            <ImageButton
+                android:id="@+id/vichycatalan"
+                android:layout_width="wrap_content"
+                android:layout_height="149dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vichycatalan" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/vinoblanco"
+                android:layout_width="133dp"
+                android:layout_height="165dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vinoblanco" />
+
+            <ImageButton
+                android:id="@+id/perafita"
+                android:layout_width="113dp"
+                android:layout_height="171dp"
+                android:layout_margin="5dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/perafita" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="16dp"/>
+
+            <Button
+                android:id="@+id/pago"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ffc327"
+                android:padding="5dp"
+                android:text="Pagar"
+                android:textColor="#4d464c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

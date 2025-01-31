@@ -15,10 +15,25 @@ class MesaActivity : AppCompatActivity()  {
         /*Botón para entrar en la aplicación del restaurante*/
         val botonAtras : ImageButton = findViewById(R.id.flecha)
 
+        // Lista con todas las mesas
+        val mesas = listOf(
+            R.id.mesa100, R.id.mesa101, R.id.mesa102,
+            R.id.mesa200, R.id.mesa201, R.id.mesa202,
+            R.id.mesa300, R.id.mesa301, R.id.mesa302
+        )
+
         /*Accion que se hace cuando el usuario clica al botón*/
         botonAtras.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
+
+        /*Accion que efectuará el camarero al elegir la mesa para los clientes*/
+        for (mesaId in mesas) {
+            findViewById<ImageButton>(mesaId).setOnClickListener {
+                val intent = Intent(this, CartaActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }

@@ -28,6 +28,9 @@
         <activity android:name=".MesaActivity"/>
         <!--Llamada la página de bebidas-->
         <activity android:name=".BebidasActivity"/>
+        <!--Llamada a la página de confirmar pago-->
+        <activity android:name=".PagoActivity"/>
+
     </application>
 
 </manifest>
