@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="#f2f6ff">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -49,6 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pagar"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="20dp"
+        android:textColor="#4d464c"
+        android:backgroundTint="#ffc327"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
 </LinearLayout>
