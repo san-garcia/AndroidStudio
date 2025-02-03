@@ -284,41 +284,6 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/especial6"
-                android:layout_width="124dp"
-                android:layout_height="96dp"
-                android:layout_margin="5dp"
-                android:background="@null"
-                android:scaleType="fitCenter"
-                android:src="@drawable/especial6" />
-
-            <ImageButton
-                android:id="@+id/especial5"
-                android:layout_width="152dp"
-                android:layout_height="94dp"
-                android:layout_margin="5dp"
-                android:background="@null"
-                android:scaleType="fitCenter"
-                android:src="@drawable/especial5" />
-
-            <ImageButton
-                android:id="@+id/especial3"
-                android:layout_width="121dp"
-                android:layout_height="100dp"
-                android:layout_margin="5dp"
-                android:background="@null"
-                android:scaleType="fitCenter"
-                android:src="@drawable/especial3" />
-
-        </LinearLayout>
-
     </LinearLayout>
 
     <LinearLayout

@@ -48,10 +48,8 @@ class CartaActivity : AppCompatActivity() {
             R.id.poke8 to 11.5,
             R.id.especial1 to 13.0,
             R.id.especial2 to 14.0,
-            R.id.especial3 to 12.5,
             R.id.especial4 to 15.0,
-            R.id.especial5 to 14.5,
-            R.id.especial6 to 16.0
+
         )
 
         // Agregar listeners a las imágenes para sumar al total
