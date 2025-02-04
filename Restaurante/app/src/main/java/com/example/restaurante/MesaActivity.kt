@@ -12,7 +12,7 @@ class MesaActivity : AppCompatActivity()  {
         enableEdgeToEdge()
         setContentView(R.layout.activity_mesa)
 
-        /*Botón para entrar en la aplicación del restaurante*/
+        // Botón para ir hacia atrás aplicación del restaurante
         val botonAtras : ImageButton = findViewById(R.id.flecha)
 
         // Lista con todas las mesas
@@ -22,13 +22,13 @@ class MesaActivity : AppCompatActivity()  {
             R.id.mesa300, R.id.mesa301, R.id.mesa302
         )
 
-        /*Accion que se hace cuando el usuario clica al botón*/
+        // Accion que se hace cuando el usuario clica al botón para ir hacia atras
         botonAtras.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
-        /*Accion que efectuará el camarero al elegir la mesa para los clientes*/
+        // Accion que efectuará el camarero al elegir la mesa para los clientes
         for (mesaId in mesas) {
             findViewById<ImageButton>(mesaId).setOnClickListener {
                 val intent = Intent(this, CartaActivity::class.java)

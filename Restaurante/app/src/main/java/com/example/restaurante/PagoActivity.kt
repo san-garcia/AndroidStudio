@@ -19,31 +19,31 @@ class PagoActivity : AppCompatActivity() {
         val productos = intent.getStringArrayListExtra("productos") ?: arrayListOf()
         val total = intent.getDoubleExtra("total", 0.0)
 
-        // Encontramos el ListView y el TextView para el total
-        val listaProductos = findViewById<ListView>(R.id.lv_productos)
-        val totalTextView = findViewById<TextView>(R.id.tv_total)
+        // Declaro los elementos
+        val listaProductos = findViewById<ListView>(R.id.productos)
+        val totalTextView = findViewById<TextView>(R.id.total)
         val botonPagar = findViewById<Button>(R.id.btnPagar)
 
-        // Configuramos el adaptador para mostrar los productos seleccionados
-        val adaptador = ArrayAdapter(this, android.R.layout.simple_list_item_1, productos)
-        listaProductos.adapter = adaptador
-
-        // Mostramos el total
+        // Mustro el total
         totalTextView.text = "Total: %.2f€".format(total)
 
-        // Configuramos el botón de pagar
+        // Mustro los productos en la ListView
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, productos)
+        listaProductos.adapter = adapter
+
+        // Configuro el botón de pagar
         botonPagar.setOnClickListener {
             // Borra el total cuando se presiona el botón
-            totalTextView.text = "Total: 0.00€" // O puedes ponerlo como un texto vacío si prefieres
-            // También podrías hacer otras acciones de pago, por ejemplo, navegar a otra pantalla si es necesario
-            // Por ahora, dejamos que solo borre el total.
+            totalTextView.text = "Total: 0.00€"
         }
 
         // Botón para volver a la pantalla anterior
         val botonAtras: ImageButton = findViewById(R.id.flecha)
+
         botonAtras.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
 }
+
