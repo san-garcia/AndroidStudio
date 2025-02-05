@@ -20,22 +20,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/nombreApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="12dp"
+        android:text="Not Alone"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"/>
+
+    <TextView
         android:id="@+id/bienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="24dp"
-        android:text="Bienvenida a la app más segura"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="La app que te acompaña a casa para que la vuelta no sea extraña"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
+        app:layout_constraintTop_toBottomOf="@id/nombreApp" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="158dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="8dp"
+        android:text="¿Aún no tienes cuenta?"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registrarse" />
 
     <Button
         android:id="@+id/iniciarSesion"
         android:layout_width="263dp"
         android:layout_height="60dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#bb5a7c"
         android:padding="12dp"
         android:text="Iniciar sesión"
@@ -48,8 +70,8 @@
         android:id="@+id/registrarse"
         android:layout_width="268dp"
         android:layout_height="56dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="124dp"
         android:backgroundTint="#bb5a7c"
         android:padding="12dp"
         android:text="Registrarte"
@@ -62,11 +84,13 @@
         android:id="@+id/logo2"
         android:layout_width="398dp"
         android:layout_height="226dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="616dp"
         android:contentDescription="Imagen de la app"
         android:src="@drawable/logo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
