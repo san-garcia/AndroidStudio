@@ -36,11 +36,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
+
     <TextView
         android:id="@+id/usuario"
         android:layout_width="325dp"
         android:layout_height="76dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="84dp"
         android:fontFamily="@font/tanseek_modern_pro_arabic"
         android:text="Introduce tu correo electrónico o nombre de usuario"
@@ -58,7 +59,49 @@
         android:fontFamily="@font/tanseek_modern_pro_arabic"
         android:inputType="text"
         android:padding="3dp"
+        android:radius="15dp"
         android:textSize="26sp"
         andorid:layout_editor_absoluteX="49dp"
         app:layout_constraintTop_toBottomOf="@id/usuario" />
+
+    <TextView
+        android:id="@+id/contrasenya"
+        android:layout_width="268dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="48dp"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
+        android:text="Introduce tu contraseña"
+        android:textColor="#c6b3f1"
+        android:textSize="30sp"
+        andorid:layout_editor_absoluteY="375dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/cajaContrasenya"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="#edeeff"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
+        android:inputType="text"
+        android:padding="3dp"
+        android:radius="15dp"
+        android:textSize="26sp"
+        andorid:layout_editor_absoluteX="49dp"
+        app:layout_constraintTop_toBottomOf="@id/contrasenya" />
+
+    <Button
+        android:id="@+id/iniciarSesion"
+        android:layout_width="263dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#bb5a7c"
+        android:padding="12dp"
+        android:text="Entrar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cajaContrasenya" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
