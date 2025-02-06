@@ -8,11 +8,19 @@
     tools:context=".MainActivity"
     android:background="@color/white">
 
+    <!-- Fondo de la página-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mapa" />
+
+
     <!--Logo de la aplicacion-->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="398dp"
-        android:layout_height="226dp"
+        android:layout_width="412dp"
+        android:layout_height="129dp"
         android:contentDescription="Logo de la aplicacion"
         android:src="@drawable/logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,21 +31,25 @@
         android:id="@+id/nombreApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
         android:text="Not Alone"
-        android:textSize="20sp"
+        android:textColor="#c6b3f1"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo"/>
+        app:layout_constraintTop_toBottomOf="@id/logo" />
 
     <TextView
         android:id="@+id/bienvenida"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="278dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
         android:text="La app que te acompaña a casa para que la vuelta no sea extraña"
-        android:textSize="20sp"
+        android:textColor="#c6b3f1"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nombreApp" />
 
@@ -45,10 +57,12 @@
         android:id="@+id/descripcion"
         android:layout_width="158dp"
         android:layout_height="33dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
         android:text="¿Aún no tienes cuenta?"
-        android:textSize="13sp"
+        android:textColor="#c6b3f1"
+        android:textSize="23sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registrarse" />
 
@@ -57,7 +71,7 @@
         android:layout_width="263dp"
         android:layout_height="60dp"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="52dp"
         android:backgroundTint="#bb5a7c"
         android:padding="12dp"
         android:text="Iniciar sesión"
@@ -68,10 +82,10 @@
 
     <Button
         android:id="@+id/registrarse"
-        android:layout_width="268dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="124dp"
+        android:layout_width="267dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="128dp"
         android:backgroundTint="#bb5a7c"
         android:padding="12dp"
         android:text="Registrarte"

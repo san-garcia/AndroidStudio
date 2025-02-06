@@ -2,8 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:andorid="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Fondo de la página-->
     <ImageView
@@ -27,38 +26,13 @@
         android:id="@+id/nombreApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
+        android:layout_marginStart="92dp"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:text="Iniciar sesión"
+        android:text="Únete a nosotras"
         android:textColor="#c6b3f1"
         android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
-    <TextView
-        android:id="@+id/usuario"
-        android:layout_width="325dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="84dp"
-        android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:text="Introduce tu correo electrónico o nombre de usuario"
-        android:textColor="#c6b3f1"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logo" />
-
-    <EditText
-        android:id="@+id/cajaUsuario"
-        android:layout_width="313dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:background="#edeeff"
-        android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:inputType="text"
-        android:padding="3dp"
-        android:textSize="26sp"
-        andorid:layout_editor_absoluteX="49dp"
-        app:layout_constraintTop_toBottomOf="@id/usuario" />
 </androidx.constraintlayout.widget.ConstraintLayout>
