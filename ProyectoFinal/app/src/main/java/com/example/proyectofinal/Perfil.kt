@@ -3,12 +3,14 @@ package com.example.proyectofinal
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
-class Inicio : AppCompatActivity() {
+class Perfil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inicio)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_perfil)
 
         val botonAtras : ImageButton = findViewById(R.id.flecha)
 
@@ -19,6 +21,4 @@ class Inicio : AppCompatActivity() {
         }
 
     }
-
-}
 }

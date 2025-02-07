@@ -21,8 +21,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
-    <!-- Llamada a ventana sesion -->
+        <!-- Llamada a ventana sesion -->
+        <activity android:name=".Sesion"/>
+
+        <!-- Llamada a ventana Registro -->
+        <activity android:name=".Registro" />
+
+        <!-- Llamada a ventana Perfil -->
+        <activity android:name=".Perfil" />
+
+        <!-- Llamada a ventana Inicio -->
+        <activity android:name=".Inicio" />
+
+    </application>
 
 </manifest>

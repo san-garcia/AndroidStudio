@@ -1,38 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!-- Fondo de la página-->
     <ImageView
-        android:layout_width="417dp"
-        android:layout_height="218dp"
+        android:layout_width="415dp"
+        android:layout_height="848dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/mapa"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-2dp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="177dp"
-        android:layout_height="163dp"
-        android:src="@drawable/perfil"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="135dp" />
-
-    <TextView
-        android:id="@+id/nombreApp"
-        android:layout_width="177dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:text="Nombre del usuario"
-        android:textColor="#c6b3f1"
-        android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView" />
+        android:src="@drawable/mapa2"
+        tools:layout_editor_absoluteX="-4dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
