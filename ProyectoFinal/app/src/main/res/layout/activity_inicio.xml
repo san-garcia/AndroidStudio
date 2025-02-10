@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <!-- Fondo de la página-->
     <ImageView
@@ -11,5 +12,15 @@
         android:scaleType="centerCrop"
         android:src="@drawable/mapa2"
         tools:layout_editor_absoluteX="-4dp" />
+
+    <ImageButton
+        android:id="@+id/flecha"
+        android:layout_width="26dp"
+        android:layout_height="21dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flecha"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="46dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

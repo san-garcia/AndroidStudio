@@ -27,16 +27,16 @@
         app:layout_constraintTop_toTopOf="@id/imageMapa"
         tools:layout_editor_absoluteX="16dp" />
 
+
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="177dp"
         android:layout_height="163dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/perfil"
-        app:layout_constraintTop_toBottomOf="@id/imageMapa"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageMapa" />
 
     <TextView
         android:id="@+id/nombreApp"
