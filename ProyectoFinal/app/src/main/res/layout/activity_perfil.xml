@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <!-- Fondo de la página-->
     <ImageView
         android:id="@+id/imageMapa"
-        android:layout_width="417dp"
-        android:layout_height="218dp"
+        android:layout_width="0dp"
+        android:layout_height="132dp"
         android:scaleType="centerCrop"
         android:src="@drawable/mapa"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <ImageButton
         android:id="@+id/flecha"
         android:layout_width="26dp"
         android:layout_height="21dp"
-        android:layout_marginTop="32dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/flecha"
-        app:layout_constraintTop_toTopOf="@id/imageMapa"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageMapa" />
 
-
+    <!-- Nombre de usuario -->
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="177dp"
         android:layout_height="163dp"
-        android:layout_marginTop="4dp"
         android:src="@drawable/perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,15 +42,100 @@
 
     <TextView
         android:id="@+id/nombreApp"
-        android:layout_width="177dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:text="Nombre del usuario"
-        android:textColor="#c6b3f1"
+        android:text="Andrea"
+        android:textColor="#7f8386"
         android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/perfil"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/perfil" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botones principales -->
+    <Button
+        android:id="@+id/botonMapa"
+        android:layout_width="263dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#734eec"
+        android:padding="12dp"
+        android:text="Mapa"
+        android:textColor="#dadcdb"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/nombreApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/botonConocer"
+        android:layout_width="263dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#f1edfc"
+        android:padding="12dp"
+        android:text="Conoce a otras mujeres"
+        android:textColor="#9898a2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/botonMapa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/botonChat"
+        android:layout_width="263dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#f1edfc"
+        android:padding="12dp"
+        android:text="Chat"
+        android:textColor="#9898a2"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/botonConocer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginTop="16dp"/>
+
+
+    <ImageButton
+        android:id="@+id/botonAjustes"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="28dp"
+        android:background="#764eec"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ajustes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_marginBottom="32dp"
+        app:layout_marginStart="32dp" />
+
+    <ImageButton
+        android:id="@+id/botonAyuda"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="28dp"
+        android:background="#764eec"
+        android:scaleType="fitCenter"
+        android:src="@drawable/comentario"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/botonEmergencia"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toEndOf="@id/botonAjustes"
+        app:layout_marginBottom="32dp" />
+
+    <ImageButton
+        android:id="@+id/botonEmergencia"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="28dp"
+        android:background="#764eec"
+        android:scaleType="fitCenter"
+        android:src="@drawable/correr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_marginBottom="32dp"
+        app:layout_marginEnd="32dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

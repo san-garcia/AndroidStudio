@@ -32,7 +32,26 @@
         <activity android:name=".Perfil" />
 
         <!-- Llamada a ventana Inicio -->
-        <activity android:name=".Inicio" />
+        <activity android:name=".Mapa" />
+
+        <!-- Llamada a ventana Mujeres -->
+        <activity android:name=".Mujeres" />
+
+        <!-- Llamada a ventana Chat -->
+        <activity android:name=".Chat" />
+
+        <!-- Llamada a ventana Ajustes -->
+        <activity android:name=".Ajustes" />
+
+        <!-- Llamada a ventana Mujeres -->
+        <activity android:name=".Ayuda" />
+
+        <!-- Llamada a ventana SOS -->
+        <activity android:name=".Emergencia" />
+
+
+
+
 
     </application>
 

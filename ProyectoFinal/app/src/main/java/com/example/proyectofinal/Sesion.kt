@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 class Sesion : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sesion)
@@ -16,7 +17,7 @@ class Sesion : AppCompatActivity() {
         val botonAtras : ImageButton = findViewById(R.id.flecha)
         val iniciarSesion : Button = findViewById(R.id.iniciarSesion)
         val cajaUsuario : EditText = findViewById(R.id.cajaUsuario)
-        val cajaContraseña : EditText = findViewById(R.id.cajaContrasenya)
+        val cajaContrasenya : EditText = findViewById(R.id.cajaContrasenya)
         val user = "admin"
         val contraseña = "admin"
 
@@ -29,7 +30,7 @@ class Sesion : AppCompatActivity() {
         /*Acción que hace el usuario al clicar Iniciar Sesión*/
         iniciarSesion.setOnClickListener {
             val insertarUsuario = cajaUsuario.text.toString()
-            val insertarContraseña = cajaContraseña.text.toString()
+            val insertarContraseña = cajaContrasenya.text.toString()
 
             /*Validamos si el usuario escribe el usuario y contraseña*/
             if (insertarUsuario.isEmpty() || insertarContraseña.isEmpty()) {
