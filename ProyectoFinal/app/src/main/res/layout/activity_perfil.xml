@@ -9,62 +9,82 @@
 
     <ImageView
         android:id="@+id/imageMapa"
-        android:layout_width="0dp"
-        android:layout_height="132dp"
+        android:layout_width="428dp"
+        android:layout_height="190dp"
         android:scaleType="centerCrop"
         android:src="@drawable/mapa"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/flecha"
-        android:layout_width="26dp"
-        android:layout_height="21dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:src="@drawable/flecha"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageMapa" />
 
-    <!-- Nombre de usuario -->
+
     <ImageView
         android:id="@+id/perfil"
         android:layout_width="177dp"
         android:layout_height="163dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/perfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageMapa" />
 
+    <LinearLayout
+        android:id="@+id/linearEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/icono"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/linea" />
+
+        <TextView
+            android:id="@+id/texto"
+            android:layout_width="77dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:text="En línea"
+            android:textColor="#7f8386"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
     <TextView
         android:id="@+id/nombreApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:text="Andrea"
+        android:text="Natalia"
         android:textColor="#7f8386"
         android:textSize="30sp"
-        app:layout_constraintTop_toBottomOf="@id/perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/perfil" />
 
-    <!-- Botones principales -->
     <Button
         android:id="@+id/botonMapa"
         android:layout_width="263dp"
         android:layout_height="60dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#734eec"
         android:padding="12dp"
         android:text="Mapa"
         android:textColor="#dadcdb"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/nombreApp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreApp" />
 
     <Button
         android:id="@+id/botonConocer"
@@ -96,38 +116,39 @@
 
     <ImageButton
         android:id="@+id/botonAjustes"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
         android:layout_marginStart="32dp"
         android:layout_marginBottom="32dp"
-        android:background="#764eec"
+        android:background="@color/white"
         android:scaleType="fitCenter"
         android:src="@drawable/ajustes"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/botonAyuda"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:background="#764eec"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/white"
         android:scaleType="fitCenter"
         android:src="@drawable/comentario"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/botonEmergencia"
-        app:layout_constraintHorizontal_bias="0.569"
-        app:layout_constraintStart_toEndOf="@id/botonAjustes"
-        android:layout_marginBottom="32dp" />
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toEndOf="@id/botonAjustes" />
 
     <ImageButton
         android:id="@+id/botonEmergencia"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="42dp"
+        android:layout_height="38dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
-        android:background="#764eec"
         android:scaleType="fitCenter"
         android:src="@drawable/correr"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

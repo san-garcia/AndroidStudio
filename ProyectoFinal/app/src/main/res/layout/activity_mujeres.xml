@@ -1,6 +1,357 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f1edfc">
+
+    <ImageButton
+        android:id="@+id/flecha"
+        android:layout_width="26dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/flechacolor"
+        app:layout_constraintEnd_toStartOf="@id/nombreApp"
+        app:layout_constraintTop_toTopOf="@id/nombreApp" />
+
+    <TextView
+        android:id="@+id/nombreApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/tanseek_modern_pro_arabic"
+        android:text="Conoce a nuestras usuarias"
+        android:textColor="#c6b3f1"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <GridLayout
+        android:layout_width="408dp"
+        android:layout_height="640dp"
+        android:columnCount="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="30dp"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nombreApp"
+        app:layout_constraintVertical_bias="0.175"
+        tools:layout_editor_absoluteX="16dp">
+
+        <LinearLayout
+            android:layout_width="161dp"
+            android:layout_height="316dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="140dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Mía"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/valoracion" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icono"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/linea" />
+
+                <TextView
+                    android:id="@+id/texto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="En línea"
+                    android:textColor="#7f8386"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mensaje" />
+
+                <TextView
+                    android:id="@+id/textoEnviar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Chatea conmigo"
+                    android:textColor="#C6B3F1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="167dp"
+            android:layout_height="315dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lia" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Lia"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="103dp"
+                android:layout_height="19dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/valoracion4" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icono1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/linea" />
+
+                <TextView
+                    android:id="@+id/texto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="En línea"
+                    android:textColor="#7f8386"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mensaje" />
+
+                <TextView
+                    android:id="@+id/textoEnviar1"
+                    android:layout_width="126dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Chatea conmigo"
+                    android:textColor="#C6B3F1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="158dp"
+            android:layout_height="271dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/noa" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Noa"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="23dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/valoracion3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icono2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/linea" />
+
+                <TextView
+                    android:id="@+id/texto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="En línea"
+                    android:textColor="#7f8386"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mensaje" />
+
+                <TextView
+                    android:id="@+id/textoEnviar2"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Chatea conmigo"
+                    android:textColor="#C6B3F1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="269dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="142dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/zoe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="Zoe"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/valoracion" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icono3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/linea" />
+
+                <TextView
+                    android:id="@+id/texto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="En línea"
+                    android:textColor="#7f8386"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mensaje" />
+
+                <TextView
+                    android:id="@+id/textoEnviar3"
+                    android:layout_width="143dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:text="Chatea conmigo"
+                    android:textColor="#C6B3F1"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

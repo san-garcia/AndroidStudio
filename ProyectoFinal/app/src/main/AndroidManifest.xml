@@ -12,47 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoFinal"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Llamada a ventana sesion -->
-        <activity android:name=".Sesion"/>
+        <activity android:name=".Sesion" />
 
-        <!-- Llamada a ventana Registro -->
         <activity android:name=".Registro" />
 
-        <!-- Llamada a ventana Perfil -->
         <activity android:name=".Perfil" />
 
-        <!-- Llamada a ventana Inicio -->
         <activity android:name=".Mapa" />
 
-        <!-- Llamada a ventana Mujeres -->
         <activity android:name=".Mujeres" />
 
-        <!-- Llamada a ventana Chat -->
         <activity android:name=".Chat" />
 
-        <!-- Llamada a ventana Ajustes -->
         <activity android:name=".Ajustes" />
 
-        <!-- Llamada a ventana Mujeres -->
         <activity android:name=".Ayuda" />
 
-        <!-- Llamada a ventana SOS -->
         <activity android:name=".Emergencia" />
 
-
-
-
-
+        <meta-data
+            android:name="com.google.android.geo.AIzaSyByMqonOUiES3ZLyzPMGQ1ShV6Fc-AS3Rw"
+            android:value="AIzaSyByMqonOUiES3ZLyzPMGQ1ShV6Fc-AS3Rw" />
     </application>
-
 </manifest>
