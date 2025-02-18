@@ -96,7 +96,7 @@
         android:layout_marginTop="8dp"
         android:background="#edeeff"
         android:fontFamily="@font/tanseek_modern_pro_arabic"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:padding="3dp"
         android:textSize="26sp"
         app:layout_constraintTop_toBottomOf="@id/contrasenya"

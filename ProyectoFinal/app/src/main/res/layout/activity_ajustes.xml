@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <!-- Fondo de la página-->
+    <!-- Fondo -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/mapa" />
+        android:src="@drawable/mapa"
+        tools:ignore="ContentDescription"/>
 
+    <!-- Botón de regreso -->
     <ImageButton
         android:id="@+id/flecha"
         android:layout_width="26dp"
@@ -19,7 +22,63 @@
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/flecha"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="43dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes"
+        android:textSize="24sp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/flecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Configuración de notificaciones -->
+    <TextView
+        android:id="@+id/textoNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificaciones"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Switch
+        android:id="@+id/switchNotificaciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textoNotificaciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Configuración de ubicación -->
+    <TextView
+        android:id="@+id/textoUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Compartir ubicación"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@id/textoNotificaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <Switch
+        android:id="@+id/switchUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/textoUbicacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
